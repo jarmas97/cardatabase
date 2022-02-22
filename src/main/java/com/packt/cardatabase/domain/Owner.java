@@ -17,9 +17,10 @@ public class Owner {
     }
 
     public Owner(String firstname, String lastname) {
-//        super();
+        super();
         this.firstname = firstname;
         this.lastname = lastname;
+
     }
 
     public List<Car> getCars() {

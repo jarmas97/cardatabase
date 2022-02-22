@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 public class CardatabaseApplication {
 
 	@Autowired
-	CarRepository repository;
+	CarRepository carRepository;
 
 	@Autowired
 	OwnerRepository ownerRepository;
@@ -23,25 +23,32 @@ public class CardatabaseApplication {
 		SpringApplication.run(CardatabaseApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner runner() {
-		return args -> {
 
-			//Add owner objects to db
-			Owner owner1 = new Owner("John", "Johnson");
-			Owner owner2 = new Owner("Mary", "Robinson");
 
-			ownerRepository.save(owner1);
-			ownerRepository.save(owner2);
 
-			//Save demo data to database
-			repository.save(
-					new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, owner1));
-			repository.save(
-					new Car("Nissan", "Leaf", "White", "SSJ-3002", 2014, 29000, owner2));
-			repository.save(
-					new Car("Toyota", "Prius", "Silver", "KKO-0212", 2018, 39000, owner2));
-		};
-	}
+//-----------------------------------THIS IS FOR INITIALIZAION----------------------------------
+//			AFTER RUNNING CODE BELOW "spring.jpa.hibernate.ddl-auto=create" PROPERTY
+//						   IN application.properties WAS SET CHANGED TO "update"
+//
+//	@Bean
+//	CommandLineRunner runner() {
+//		return args -> {
+//
+//			//Add owner objects to db
+//			Owner owner1 = new Owner("John", "Johnson");
+//			Owner owner2 = new Owner("Mary", "Robinson");
+//
+//			ownerRepository.save(owner1);
+//			ownerRepository.save(owner2);
+//
+//			//Save demo data to database
+//			carRepository.save(
+//					new Car("Ford", "Mustang", "Red", "ADF-1121", 2017, 59000, owner1));
+//			carRepository.save(
+//					new Car("Nissan", "Leaf", "White", "SSJ-3002", 2014, 29000, owner2));
+//			carRepository.save(
+//					new Car("Toyota", "Prius", "Silver", "KKO-0212", 2018, 39000, owner2));
+//		};
+//	}
 
 }
