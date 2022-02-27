@@ -11,8 +11,8 @@ public class Car {
     private String brand, model, color, registerNumber;
     private int year, price;
 
-    @ManyToOne(fetch = FetchType.LAZY)  //Many cars to one owner. FetchType.LAZY is recommended in this case
-    @JoinColumn(name = "owner")         //Points foreign key
+    @ManyToOne(fetch = FetchType.EAGER)  //Many cars to one owner. FetchType.LAZY / EAGER is recommended in this case
+    @JoinColumn(name = "owner")          //Points foreign key
     private Owner owner;
 
     public Car() {
