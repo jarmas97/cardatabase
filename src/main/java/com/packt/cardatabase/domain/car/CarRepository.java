@@ -1,14 +1,17 @@
 package com.packt.cardatabase.domain.car;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 
 public interface CarRepository extends CrudRepository<Car, Long> {
 
 //    SINGLE PARAMETER QUERIES
 //
-//    List<Car> findByBrand(String brand);
-//
-//    List<Car> findByColor(String color);
+    List<Car> findByBrand(@Param("brand") String brand);
+
+    List<Car> findByColor(@Param("color") String color);
 //
 //    List<Car> findByYear(int year);
 //
