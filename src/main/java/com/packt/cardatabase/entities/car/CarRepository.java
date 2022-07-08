@@ -1,4 +1,4 @@
-package com.packt.cardatabase.domain.car;
+package com.packt.cardatabase.entities.car;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

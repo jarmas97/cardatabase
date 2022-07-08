@@ -1,7 +1,7 @@
-package com.packt.cardatabase.domain.owner;
+package com.packt.cardatabase.entities.owner;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.packt.cardatabase.domain.car.Car;
+import com.packt.cardatabase.entities.car.Car;
 
 import javax.persistence.*;
 import java.util.List;

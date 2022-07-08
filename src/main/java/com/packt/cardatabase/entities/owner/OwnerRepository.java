@@ -1,4 +1,4 @@
-package com.packt.cardatabase.domain.owner;
+package com.packt.cardatabase.entities.owner;
 
 import org.springframework.data.repository.CrudRepository;
 

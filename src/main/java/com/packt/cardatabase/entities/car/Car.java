@@ -1,6 +1,6 @@
-package com.packt.cardatabase.domain.car;
+package com.packt.cardatabase.entities.car;
 
-import com.packt.cardatabase.domain.owner.Owner;
+import com.packt.cardatabase.entities.owner.Owner;
 
 import javax.persistence.*;
 
