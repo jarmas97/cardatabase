@@ -38,7 +38,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         new LoginFilter("/login",
                         authenticationManager()),
                         UsernamePasswordAuthenticationFilter.class
-                );
+                )
+                .csrf().disable();
     }
 
     //This is needed for the frontend that is sending requests from the other origin
